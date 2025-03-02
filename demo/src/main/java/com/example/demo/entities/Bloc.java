@@ -12,18 +12,15 @@ import java.util.List;
 @Setter
 public class Bloc {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long idBloc;
 
     private String nomBloc;
     private long capaciteBloc;
 
-    // Association with Foyer (Many-to-One)
     @ManyToOne
-    @JoinColumn(name = "idFoyer")
     private Foyer foyer;
 
-    // Association with Chambre (One-to-Many)
     @OneToMany(mappedBy = "bloc")
     private List<Chambre> chambres;
 }

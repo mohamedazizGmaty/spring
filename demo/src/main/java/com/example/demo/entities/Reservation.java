@@ -17,13 +17,10 @@ public class Reservation {
     private Date anneeUniversitaire;
     private boolean estValide;
 
-    // Association with Chambre (One-to-One)
     @OneToOne
-    @JoinColumn(name = "idChambre")
     private Chambre chambre;
 
     // Association with Etudiant (Many-to-One)
     @ManyToOne
-    @JoinColumn(name = "idEtudiant")
     private Etudiant etudiant;
 }

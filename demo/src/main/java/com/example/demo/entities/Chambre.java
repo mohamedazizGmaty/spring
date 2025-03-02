@@ -18,12 +18,9 @@ public class Chambre {
     @Enumerated(EnumType.STRING)
     private TypeChambre typeC;
 
-    // Association with Bloc (Many-to-One)
     @ManyToOne
-    @JoinColumn(name = "idBloc")
     private Bloc bloc;
 //Aziz Gmatty
-    // Association with Reservation (One-to-One)
     @OneToOne(mappedBy = "chambre")
     private Reservation reservation;
 }

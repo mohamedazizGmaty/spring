@@ -18,6 +18,5 @@ public class Universite {
 
     // Association with Foyer (One-to-One)
     @OneToOne
-    @JoinColumn(name = "idFoyer")
     private Foyer foyer;
 }

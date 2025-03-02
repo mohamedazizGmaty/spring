@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 public class Foyer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long idFoyer;
 
     private String nomFoyer;
